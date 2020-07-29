@@ -1,0 +1,11 @@
+method;sampleType;processingType
+20190204_PAL_filtrate_DDA.meth;filtrate;DDA
+20190204_PAL_filtrate_DIA.meth;filtrate;DIA
+20190204_PAL_blank_spike_DDA.meth;blank_spike;DDA
+20190204_PAL_blank_DDA.meth;blank;DDA
+20190204_PAL_filtrate_spike_DDA.meth;filtrate_spike;DDA
+20190204_PAL_vial_novalve_DDA.meth;calibration;DDA
+20190204_PAL_filtrate_DDA_IL.meth;filtrate;DDA
+20190204_PAL_blank_DIA.meth;blank;DIA
+20190131_PAL_filtrate_DIA_noIS.meth;filtrate_noIS;DIA
+20190131_PAL_blank_DDA.meth;blank;DDA

@@ -1,0 +1,12 @@
+.drake
+picked
+logCluster.txt
+reports
+results
+*.pdf
+*.wmf
+*.emf
+*.RData
+.Rproj.user
+*.ms
+*.msp

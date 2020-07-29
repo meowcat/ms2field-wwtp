@@ -1,0 +1,12 @@
+Methylbenzotriazol_167_p
+Benzotriazol_166_p
+Metoprolol_172_p
+Carbamazepin_194_p
+Diclofenac_201_p_n
+Irbesartan_2774_p
+Valsartan_2583_p
+Amisulprid_2852_p
+Candesartan_2804_p
+Clarithromycin_191_p
+Venlafaxin_645_p
+Hydrochlorothiazid_2610_n

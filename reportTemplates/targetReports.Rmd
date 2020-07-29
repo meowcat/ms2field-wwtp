@@ -1,0 +1,55 @@
+---
+title: "Profiles per target cpd"
+output: html_document
+params:
+    hitIntensities: ""
+      
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(root.dir= "add root dir here")
+knitr::opts_chunk$set(fig.width = 10)
+knitr::opts_chunk$set(fig.height = 6)
+library(plyr)
+library(drake)
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r load-intensities, echo=FALSE}
+#loadd(hitIntensities, character_only = TRUE)
+hitIntensities <- params$hitIntensities
+
+```
+
+
+```{r}
+for(i in seq_along(hitIntensities))
+{
+  intMatrix <- hitIntensities[[i]]
+
+  intSum <- rowSums(intMatrix, na.rm=TRUE)
+  intRange <- range(intSum, 0, na.rm = TRUE)
+  par(mar=c(3,2,1,1)+0.1)
+  plot.new()
+  plot.window(xlim=c(0, nrow(intMatrix)), ylim=intRange)
+  axis(1)
+  axis(2)
+  columnSeq <- seq_len(ncol(intMatrix))
+  l_ply(columnSeq, function(iCol)
+  {
+    lines(intMatrix[,iCol], col=iCol)
+  })
+  lines(intSum, col="black", lty=3)
+  hits <- attr(intMatrix, "hit")
+  hitsLegend <- paste(hits$Name.y, "(", round(hits$RT / 60, 1), "min)", format(hits$int, scientific = TRUE, digits=1), hits$profileID)
+  legend("topleft", bty="n", fill=columnSeq, legend=hitsLegend)
+  
+}
+```
+
